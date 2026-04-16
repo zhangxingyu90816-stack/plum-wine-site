@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meijian 梅見｜香港梅酒品牌展示網站</title>
+  <title>Meijian 梅見｜香港青梅酒品牌官網</title>
   <meta
     name="description"
-    content="Meijian 梅見香港品牌展示網站，呈現清爽細膩的青梅酒體驗，適合聚餐、送禮與日常微醺時刻。"
+    content="Meijian 梅見香港青梅酒品牌官網。以青梅果香為靈感，呈現清爽、細膩、適合都市生活的現代梅酒體驗。"
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <!-- Age Gate -->
   <div class="age-gate" id="ageGate">
+    <div class="age-gate__backdrop"></div>
     <div class="age-gate__card">
       <p class="age-gate__eyebrow">Age Confirmation</p>
       <h2>請先確認年齡</h2>
       <p>
-        本網站內容僅供年滿18歲人士瀏覽。<br />
+        本網站內容僅供年滿 18 歲人士瀏覽。<br />
         請確認你已達所在地區法定飲酒年齡。
       </p>
       <div class="age-gate__actions">
@@ -27,16 +28,19 @@
     </div>
   </div>
 
-  <header class="site-header">
+  <!-- Header -->
+  <header class="site-header" id="top">
     <div class="container nav">
-      <div class="brand">
+      <a href="#top" class="brand" aria-label="Meijian 梅見">
         <span class="brand-en">Meijian</span>
+        <span class="brand-divider"></span>
         <span class="brand-zh">梅見</span>
-      </div>
+      </a>
 
       <nav class="nav-links">
-        <a href="#about">品牌故事</a>
+        <a href="#about">品牌理念</a>
         <a href="#products">產品系列</a>
+        <a href="#moments">飲用場景</a>
         <a href="#gallery">品牌影像</a>
         <a href="#contact">聯絡合作</a>
       </nav>
@@ -44,7 +48,8 @@
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Hero -->
+    <section class="hero section">
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Hong Kong Plum Wine</span>
@@ -65,85 +70,89 @@
       </div>
     </section>
 
-    <section class="brand-values" id="about">
-      <div class="section-inner">
-        <span class="eyebrow">Brand Values</span>
-        <h2>清爽、細膩、帶有東方氣質的梅酒體驗。</h2>
-        <p>
-          梅見希望把青梅酒從傳統印象中帶出來，
-          以更現代、更輕盈、更貼近日常生活的方式，
-          讓每一次開瓶都成為值得分享的微醺片刻。
-        </p>
+    <!-- Brand Values -->
+    <section class="brand-values section-soft" id="about">
+      <div class="container">
+        <div class="section-inner">
+          <span class="eyebrow">Brand Values</span>
+          <h2>清爽、細膩、帶有東方氣質的梅酒體驗。</h2>
+          <p>
+            梅見希望把青梅酒從傳統印象中帶出來，以更現代、更輕盈、
+            更貼近日常生活的方式，讓每一次開瓶都成為值得分享的微醺片刻。
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Story -->
+    <section class="section story">
       <div class="container content-grid">
         <div class="content-copy">
           <span class="eyebrow">About Meijian</span>
           <h2>把東方梅酒，帶進更日常的餐桌。</h2>
           <p>
-            梅見致力於打造更適合現代都市生活的梅酒體驗。
-            以優質青梅風味為核心，融合東方釀造靈感與清爽口感，
-            呈現順口、細膩且富有層次的飲用感受。
+            梅見以青梅果香為核心，融合東方氣韻與當代生活方式，
+            呈現更清爽、更順口、更容易分享的梅酒風味。
           </p>
           <p>
-            在香港這座節奏鮮明的城市，
-            我們希望每一口梅酒都能帶來片刻放鬆，
-            讓生活在忙碌之中，也保有自己的儀式感。
+            在香港這座節奏鮮明的城市，我們希望每一口梅酒都能帶來片刻放鬆，
+            讓餐桌、小聚與生活場景之間，多一點從容與儀式感。
           </p>
         </div>
 
         <div class="content-visual">
-          <img src="assets/hero-blossom.png" alt="梅見品牌故事形象圖" />
+          <img src="assets/hero-blossom.png" alt="梅見花景品牌形象圖" />
         </div>
       </div>
     </section>
 
+    <!-- Products -->
     <section class="section section-soft" id="products">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Product Collection</span>
           <h2>產品系列</h2>
           <p>
-            從日常小酌到聚會分享，
-            梅見以不同場景呈現青梅酒的多樣魅力。
+            由冰飲到佐餐，由小聚到送禮，梅見以不同風格呈現青梅酒的多樣魅力。
           </p>
         </div>
 
         <div class="product-grid">
           <article class="product-card">
-            <img src="assets/ice-bottle.png" alt="梅見青梅酒 冰飲推薦" />
+            <div class="product-image-wrap">
+              <img src="assets/ice-bottle.png" alt="梅見清爽冰飲款" />
+            </div>
             <div class="product-info">
-              <span class="product-volume">冰飲推薦</span>
+              <span class="product-volume">Ice Serve</span>
               <h3>清爽冰飲款</h3>
               <p>
-                加入冰塊後更顯清爽俐落，
-                適合香港炎熱天氣、小聚微醺與餐飲搭配。
+                加入冰塊後更顯清爽俐落，適合香港炎熱天氣、小聚微醺與餐飲搭配。
               </p>
             </div>
           </article>
 
           <article class="product-card">
-            <img src="assets/plum-bottle.png" alt="梅見青梅酒 經典款" />
+            <div class="product-image-wrap">
+              <img src="assets/plum-bottle.png" alt="梅見青梅果香款" />
+            </div>
             <div class="product-info">
-              <span class="product-volume">經典系列</span>
+              <span class="product-volume">Classic</span>
               <h3>青梅果香款</h3>
               <p>
-                以青梅果香為核心，入口順滑、風味細緻，
-                呈現更貼近日常生活的梅酒體驗。
+                以青梅果香為核心，入口順滑、風味細緻，呈現更貼近日常生活的梅酒體驗。
               </p>
             </div>
           </article>
 
           <article class="product-card">
-            <img src="assets/moss-bottle.png" alt="梅見青梅酒 東方風格款" />
+            <div class="product-image-wrap">
+              <img src="assets/moss-bottle.png" alt="梅見東方氣質款" />
+            </div>
             <div class="product-info">
-              <span class="product-volume">品牌精選</span>
+              <span class="product-volume">Signature</span>
               <h3>東方氣質款</h3>
               <p>
-                結合山石、苔蘚與自然意象，
-                更能呈現梅見細膩、沉靜且高級的品牌氛圍。
+                結合山石、苔蘚與自然意象，更能呈現梅見細膩、沉靜且高級的品牌氛圍。
               </p>
             </div>
           </article>
@@ -151,7 +160,8 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- Moments -->
+    <section class="section" id="moments">
       <div class="container content-grid reverse">
         <div class="content-visual two-up">
           <img src="assets/forest-bottle.png" alt="梅見森林場景圖" />
@@ -162,40 +172,47 @@
           <span class="eyebrow">Drinking Experience</span>
           <h2>不只是酒，更是一種生活方式。</h2>
           <p>
-            從冰鎮直飲，到搭配餐食，
-            梅見適合多種場景：
+            從冰鎮直飲，到搭配餐食，梅見適合多種場景：
             朋友小聚、餐廳佐餐、或一個人的放鬆時刻。
           </p>
           <p>
-            清爽不膩的口感，
-            讓梅酒更貼近香港人的日常飲用習慣，
+            清爽不膩的口感，讓梅酒更貼近香港人的日常飲用習慣，
             也更容易融入當代生活方式之中。
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Gallery -->
     <section class="section section-soft" id="gallery">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Brand Gallery</span>
           <h2>品牌影像</h2>
           <p>
-            以露珠、雙瓶陳列、自然場景與花景光影，
-            建立屬於梅見的清爽、自然與東方感視覺語言。
+            以露珠、雙瓶陳列、自然場景與花景光影，建立屬於梅見的清爽、自然與東方感視覺語言。
           </p>
         </div>
 
         <div class="gallery-grid">
-          <img src="assets/dew-bottle.png" alt="梅見品牌影像 露珠瓶身" />
-          <img src="assets/double-bottle.png" alt="梅見品牌影像 雙瓶陳列" />
-          <img src="assets/forest-bottle.png" alt="梅見品牌影像 森林場景" />
-          <img src="assets/hero-blossom.png" alt="梅見品牌影像 花景瓶身" />
+          <figure class="gallery-item">
+            <img src="assets/dew-bottle.png" alt="梅見品牌影像 露珠瓶身" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/double-bottle.png" alt="梅見品牌影像 雙瓶陳列" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/forest-bottle.png" alt="梅見品牌影像 森林場景" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/hero-blossom.png" alt="梅見品牌影像 花景瓶身" />
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Features -->
+    <section class="section features">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">Why Meijian</span>
@@ -226,8 +243,9 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section class="section section-soft" id="contact">
-      <div class="container content-grid">
+      <div class="container contact-grid">
         <div class="content-copy">
           <span class="eyebrow">Contact & Partnership</span>
           <h2>聯絡合作</h2>
@@ -245,17 +263,61 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="mailto:hello@hkplumwine.com">電郵聯絡</a>
-            <a class="btn btn-secondary" href="https://wa.me/85200000000" target="_blank" rel="noreferrer">WhatsApp 查詢</a>
+            <a
+              class="btn btn-secondary"
+              href="https://wa.me/85200000000"
+              target="_blank"
+              rel="noreferrer"
+            >WhatsApp 查詢</a>
           </div>
         </div>
 
-        <div class="content-visual">
-          <img src="assets/garden-bottle.png" alt="梅見合作與聯絡形象圖" />
+        <div class="contact-panel">
+          <form class="contact-form" onsubmit="return submitInquiry(event)">
+            <label>
+              姓名
+              <input type="text" name="name" placeholder="請輸入姓名" required />
+            </label>
+
+            <label>
+              電郵
+              <input type="email" name="email" placeholder="請輸入電郵" required />
+            </label>
+
+            <label>
+              電話
+              <input type="text" name="phone" placeholder="請輸入電話" />
+            </label>
+
+            <label>
+              合作類型
+              <select name="type">
+                <option>零售購買</option>
+                <option>批發採購</option>
+                <option>餐飲合作</option>
+                <option>活動用酒</option>
+                <option>其他查詢</option>
+              </select>
+            </label>
+
+            <label>
+              留言
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="請輸入你的需求，例如數量、送貨地區、合作方式。"
+              ></textarea>
+            </label>
+
+            <button class="btn btn-primary btn-full" type="submit">提交查詢</button>
+            <p id="formMsg" class="form-msg"></p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -270,8 +332,9 @@
       <div class="footer-links">
         <h4>網站導覽</h4>
         <ul>
-          <li><a href="#about">品牌故事</a></li>
+          <li><a href="#about">品牌理念</a></li>
           <li><a href="#products">產品系列</a></li>
+          <li><a href="#moments">飲用場景</a></li>
           <li><a href="#gallery">品牌影像</a></li>
           <li><a href="#contact">聯絡合作</a></li>
         </ul>
@@ -313,6 +376,14 @@
     leaveSiteBtn.addEventListener("click", function () {
       window.location.href = "https://www.google.com";
     });
+
+    function submitInquiry(event) {
+      event.preventDefault();
+      const msg = document.getElementById("formMsg");
+      msg.textContent = "查詢已提交，我們會盡快與你聯絡。";
+      event.target.reset();
+      return false;
+    }
   </script>
 </body>
 </html>
