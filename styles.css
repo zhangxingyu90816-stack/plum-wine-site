@@ -154,3 +154,24 @@ button, input, textarea, select { font: inherit; }
   .footer-bottom { flex-direction: column; }
   .whatsapp-float { right: 16px; bottom: 16px; }
 }
+.en-subtitle {
+  display: inline-block;
+  font-size: 0.46em;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #7a6458;
+  margin-top: 10px;
+  letter-spacing: 0.01em;
+}
+
+.product-content .en-subtitle,
+.section-copy .en-subtitle,
+.section-heading .en-subtitle {
+  font-size: 0.58em;
+}
+
+@media (max-width: 768px) {
+  .en-subtitle {
+    font-size: 0.56em;
+  }
+}
