@@ -1,173 +1,979 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-HK">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meijian | 梅见</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meijian 梅見｜Global Plum Wine Brand</title>
+  <meta
+    name="description"
+    content="Meijian 梅見是一個來自東方的青梅酒品牌，將青梅、風味、工藝與生活方式結合，打造面向全球市場的現代梅酒體驗。"
+  />
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-<style>
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
-    margin: 0;
-    background: #f5efe8;
-    color: #2c2c2c;
-}
+    :root{
+      --bg:#f6f1ea;
+      --bg-soft:#efe7dc;
+      --white:#ffffff;
+      --text:#241b17;
+      --muted:#5f5148;
+      --brand:#8f243f;
+      --brand-dark:#741d33;
+      --line:#ddd0c4;
+      --shadow:0 14px 34px rgba(22,14,9,.08);
+      --radius:24px;
+    }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang HK","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.75;
+    }
 
-.section {
-    padding: 80px 0;
-}
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-h1 {
-    font-size: 42px;
-    text-align: center;
-}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+    .container{
+      width:min(1180px, calc(100% - 48px));
+      margin:0 auto;
+    }
 
-p {
-    text-align: center;
-    line-height: 1.8;
-}
+    .section{
+      padding:96px 0;
+    }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
+    .section-soft{
+      background:var(--bg-soft);
+    }
 
-.grid img {
-    width: 100%;
-    border-radius: 16px;
-}
+    .eyebrow{
+      display:inline-block;
+      padding:8px 16px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--brand);
+      background:rgba(255,255,255,.72);
+      font-size:13px;
+      line-height:1;
+      margin-bottom:18px;
+    }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-}
+    .en-subtitle{
+      display:block;
+      font-size:.48em;
+      line-height:1.3;
+      font-weight:500;
+      color:#7a6458;
+      margin-top:10px;
+      letter-spacing:.01em;
+    }
 
-.card {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-}
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      background:rgba(246,241,234,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(36,27,23,.06);
+    }
 
-.card img {
-    width: 100%;
-}
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
 
-.card h3 {
-    padding: 15px;
-}
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+    }
 
-.card p {
-    padding: 0 15px 20px;
-    text-align: left;
-}
-</style>
+    .brand-en{ font-size:22px; }
+    .brand-divider{
+      width:1px;
+      height:18px;
+      background:rgba(36,27,23,.18);
+    }
+    .brand-zh{ font-size:18px; font-weight:600; }
 
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:22px;
+      font-size:15px;
+      color:#4b4039;
+    }
+
+    .nav-links a:hover{ color:var(--brand); }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:128px;
+      padding:13px 24px;
+      border-radius:999px;
+      font-size:15px;
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+
+    .btn-primary{
+      background:var(--brand);
+      color:#fff;
+    }
+
+    .btn-primary:hover{
+      background:var(--brand-dark);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--line);
+      color:var(--text);
+    }
+
+    .btn-secondary:hover{
+      background:#fff;
+    }
+
+    .hero-grid,
+    .split-layout,
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:54px;
+      align-items:center;
+    }
+
+    .split-layout--reverse{
+      direction:rtl;
+    }
+    .split-layout--reverse > *{
+      direction:ltr;
+    }
+
+    .hero-copy h1,
+    .section-heading h2,
+    .section-copy h2{
+      margin:0 0 18px;
+      font-size:clamp(36px,5vw,66px);
+      line-height:1.1;
+      letter-spacing:-.03em;
+    }
+
+    .hero-text,
+    .section-heading p,
+    .section-copy p{
+      font-size:16px;
+      color:var(--muted);
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:26px;
+    }
+
+    .hero-visual img,
+    .section-visual img{
+      width:100%;
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      object-fit:cover;
+    }
+
+    .hero-visual img{
+      height:560px;
+    }
+
+    .section-heading{
+      max-width:860px;
+      margin:0 auto 44px;
+      text-align:center;
+    }
+
+    .card-surface,
+    .contact-panel{
+      background:rgba(255,255,255,.84);
+      border:1px solid rgba(36,27,23,.06);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      padding:30px;
+    }
+
+    .section-copy h3{
+      margin:0 0 14px;
+      font-size:24px;
+      line-height:1.3;
+    }
+
+    .ingredient-layout{
+      display:grid;
+      grid-template-columns:1.25fr .9fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .ingredient-images{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .ingredient-images img{
+      width:100%;
+      height:520px;
+      object-fit:cover;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .ingredient-card{
+      min-height:320px;
+    }
+
+    .section-visual img.wide{
+      height:460px;
+    }
+
+    .bullet-list{
+      margin:20px 0 0;
+      padding-left:20px;
+      color:var(--muted);
+    }
+
+    .bullet-list li{
+      margin-bottom:8px;
+    }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:24px;
+    }
+
+    .product-card{
+      background:var(--white);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(36,27,23,.05);
+    }
+
+    .product-card img{
+      width:100%;
+      height:360px;
+      object-fit:cover;
+    }
+
+    .product-content{
+      padding:22px 22px 26px;
+    }
+
+    .product-label{
+      margin:0 0 10px;
+      color:var(--brand);
+      font-size:13px;
+    }
+
+    .product-content h3{
+      margin:0 0 12px;
+      font-size:22px;
+      line-height:1.3;
+    }
+
+    .product-content p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .visual-double{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .visual-double img{
+      width:100%;
+      height:420px;
+      object-fit:cover;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .culture-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:16px;
+    }
+
+    .culture-main{
+      grid-row:span 2;
+    }
+
+    .culture-main img{
+      width:100%;
+      height:580px;
+      object-fit:cover;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .culture-side{
+      min-height:280px;
+    }
+
+    .culture-small-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .culture-small-grid img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-list{
+      list-style:none;
+      padding:0;
+      margin:22px 0 24px;
+    }
+
+    .contact-list li{
+      margin-bottom:10px;
+      color:var(--muted);
+    }
+
+    .contact-form{
+      display:grid;
+      gap:16px;
+    }
+
+    .contact-form label{
+      display:grid;
+      gap:8px;
+      font-size:14px;
+      color:#4f443d;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea{
+      width:100%;
+      border:1px solid #ddd0c4;
+      border-radius:14px;
+      padding:12px 14px;
+      font-size:14px;
+      background:#fffdfb;
+      color:var(--text);
+      outline:none;
+    }
+
+    .contact-form textarea{
+      resize:vertical;
+      min-height:126px;
+    }
+
+    .form-msg{
+      margin:2px 0 0;
+      min-height:22px;
+      font-size:14px;
+      color:var(--brand);
+    }
+
+    .site-footer{
+      background:#171717;
+      color:rgba(255,255,255,.84);
+      padding:64px 0 28px;
+    }
+
+    .footer-inner{
+      width:min(1180px, calc(100% - 48px));
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr;
+      gap:40px;
+    }
+
+    .footer-brand h3,
+    .footer-links h4,
+    .footer-contact h4{
+      margin:0 0 14px;
+      color:#fff;
+    }
+
+    .footer-tagline{
+      margin:0 0 12px;
+      color:#f1d7c6;
+    }
+
+    .footer-desc{
+      margin:0;
+      color:rgba(255,255,255,.7);
+    }
+
+    .footer-links ul,
+    .footer-contact ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+
+    .footer-links li,
+    .footer-contact li{
+      margin-bottom:10px;
+    }
+
+    .footer-bottom{
+      width:min(1180px, calc(100% - 48px));
+      margin:30px auto 0;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.12);
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.58);
+      font-size:13px;
+    }
+
+    .age-gate{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      z-index:1000;
+    }
+
+    .age-gate__backdrop{
+      position:absolute;
+      inset:0;
+      background:rgba(20,16,14,.74);
+    }
+
+    .age-gate__card{
+      position:relative;
+      width:min(480px,100%);
+      background:var(--white);
+      border-radius:24px;
+      padding:30px 24px;
+      text-align:center;
+      box-shadow:0 18px 50px rgba(0,0,0,.18);
+    }
+
+    .age-gate__eyebrow{
+      color:var(--brand);
+      margin:0 0 8px;
+      font-size:13px;
+    }
+
+    .age-gate__card h2{
+      margin:0 0 12px;
+      font-size:28px;
+      line-height:1.35;
+    }
+
+    .age-gate__card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .age-gate__actions{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:1024px){
+      .hero-grid,
+      .split-layout,
+      .contact-grid,
+      .ingredient-layout,
+      .product-grid,
+      .footer-inner,
+      .culture-grid{
+        grid-template-columns:1fr;
+      }
+
+      .ingredient-images,
+      .visual-double,
+      .culture-small-grid{
+        grid-template-columns:1fr;
+      }
+
+      .culture-main{
+        grid-row:auto;
+      }
+    }
+
+    @media (max-width:768px){
+      .container,
+      .footer-inner,
+      .footer-bottom{
+        width:min(100% - 32px, 1180px);
+      }
+
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:16px 0;
+      }
+
+      .nav-links{
+        gap:14px;
+      }
+
+      .section{
+        padding:72px 0;
+      }
+
+      .hero-visual img,
+      .ingredient-images img,
+      .section-visual img.wide,
+      .product-card img,
+      .visual-double img,
+      .culture-main img,
+      .culture-small-grid img{
+        height:auto;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="age-gate" id="ageGate">
+    <div class="age-gate__backdrop"></div>
+    <div class="age-gate__card">
+      <p class="age-gate__eyebrow">Age Confirmation</p>
+      <h2>請先確認年齡<br />Please Confirm Your Age</h2>
+      <p>
+        本網站內容僅供年滿 18 歲人士瀏覽。<br />
+        請確認你已達所在地區法定飲酒年齡。<br /><br />
+        This website is intended for visitors aged 18 or above only.<br />
+        Please confirm that you are of legal drinking age in your region.
+      </p>
+      <div class="age-gate__actions">
+        <button class="btn btn-primary" id="enterSiteBtn">我已滿18歲 / I am 18+</button>
+        <button class="btn btn-secondary" id="leaveSiteBtn">離開網站 / Leave</button>
+      </div>
+    </div>
+  </div>
 
-<!-- 顶部（聚会） -->
-<div class="section">
-<div class="container">
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Meijian 梅見">
+        <span class="brand-en">Meijian</span>
+        <span class="brand-divider"></span>
+        <span class="brand-zh">梅見</span>
+      </a>
 
-<h1>從一顆青梅開始，建立風味的起點。</h1>
-<p>From a Single Green Plum Begins the Origin of Flavor.</p>
+      <nav class="nav-links">
+        <a href="#philosophy">品牌理念 / Philosophy</a>
+        <a href="#ingredient">青梅原料 / Ingredient</a>
+        <a href="#craft">釀造工藝 / Craft</a>
+        <a href="#products">產品系列 / Products</a>
+        <a href="#contact">聯絡合作 / Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<p>
-梅酒不只是風味，更是一種生活方式。從聚會到日常，
-它自然融入每一個共享的時刻。
-</p>
+  <main>
+    <!-- Hero -->
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Global Plum Wine Brand</span>
+          <h1>
+            青梅酒，屬於分享的時刻。 
+            <span class="en-subtitle">Plum Wine Belongs to Moments of Sharing.</span>
+          </h1>
+          <p class="hero-text">
+            從朋友相聚，到餐桌時刻，一杯梅酒，讓氣氛自然發生。它不只是飲品，而是連結彼此的方式。<br /><br />
+            From gatherings with friends to dining-table moments, a glass of plum wine brings the atmosphere to life naturally. It is not merely a drink, but a way of connecting people.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">查看產品 / View Products</a>
+            <a class="btn btn-secondary" href="#contact">聯絡合作 / Contact Us</a>
+          </div>
+        </div>
 
-<p>
-Plum wine is more than flavor — it’s a lifestyle,
-present in gatherings and everyday moments.
-</p>
+        <div class="hero-visual">
+          <img src="assets/hero-party.png" alt="Meijian dining and social moment" />
+        </div>
+      </div>
+    </section>
 
-<br>
+    <!-- Philosophy -->
+    <section class="section section-soft" id="philosophy">
+      <div class="container split-layout">
+        <div class="section-copy">
+          <span class="eyebrow">Brand Philosophy</span>
+          <h2>
+            一瓶梅酒，不只為飲用而存在。
+            <span class="en-subtitle">A Bottle of Plum Wine Exists for More Than Drinking.</span>
+          </h2>
+          <p>
+            對梅見而言，青梅酒不只是酒體本身，而是一種從原料出發、經時間釀成，最終走進餐桌與人際分享的體驗總和。<br /><br />
+            For Meijian, plum wine is more than the liquid itself. It is a complete experience that begins with ingredients, evolves through time, and finally enters dining tables and shared moments.
+          </p>
+          <p>
+            我們希望把東方青梅的清香、節氣與文化感，轉化為更當代、更易親近，也更適合全球市場理解的品牌語言。<br /><br />
+            We hope to translate the fragrance of oriental green plums, the rhythm of seasons, and a sense of culture into a more contemporary, approachable, and globally understandable brand language.
+          </p>
+        </div>
 
-<img src="assets/hero-party.png" style="width:100%;border-radius:16px;">
+        <div class="section-visual">
+          <img src="assets/pour-studio.png" alt="Meijian pour studio image" />
+        </div>
+      </div>
+    </section>
 
-</div>
-</div>
+    <!-- Ingredient -->
+    <section class="section" id="ingredient">
+      <div class="container section-heading">
+        <span class="eyebrow">Natural Ingredient</span>
+        <h2>
+          從一顆青梅開始，建立風味的起點。
+          <span class="en-subtitle">From a Single Green Plum Begins the Origin of Flavor.</span>
+        </h2>
+        <p>
+          原料不是背景，而是品牌的出發點。成熟青梅的酸、香、汁水與果肉狀態，共同決定最終酒體的清爽度、純淨感與層次。<br /><br />
+          Ingredients are not a background detail, but the true starting point of the brand. The acidity, aroma, juiciness, and flesh of ripe green plums define the freshness, purity, and layered character of the final wine.
+        </p>
+      </div>
 
-<!-- 原料 -->
-<div class="section">
-<div class="container grid">
+      <div class="container ingredient-layout">
+        <div class="ingredient-images">
+          <img src="assets/plum-picking-close.jpg" alt="Close-up green plum picking" />
+          <img src="assets/plum-harvest.jpg" alt="Green plum harvest" />
+        </div>
 
-<div>
-<img src="assets/plum-harvest.jpg">
-</div>
+        <div class="section-copy card-surface ingredient-card">
+          <h3>
+            真正的風味，從原料開始被尊重。
+            <span class="en-subtitle">True Flavor Begins with Respect for the Ingredient.</span>
+          </h3>
+          <p>
+            我們重視果實的真實性，也重視採摘時節。青梅不是抽象的符號，而是梅酒一切香氣與口感的源頭。<br /><br />
+            We value the authenticity of the fruit and the timing of harvest. Green plums are not abstract symbols; they are the source of all aroma and flavor in plum wine.
+          </p>
+          <p>
+            青梅的鮮亮、微酸與自然果香，既是果實本身的自然表情，也是品牌延伸風味層次的起點。<br /><br />
+            The brightness, gentle acidity, and natural fruit aroma of green plums are not only the fruit’s own expression, but also the beginning of the layered taste that defines the brand.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<div>
-<img src="assets/plum-picking-close.jpg">
-</div>
+    <!-- Craft -->
+    <section class="section section-soft" id="craft">
+      <div class="container split-layout">
+        <div class="section-copy">
+          <span class="eyebrow">Craftsmanship</span>
+          <h2>
+            讓時間參與風味，讓工藝保持克制。
+            <span class="en-subtitle">Let Time Shape the Flavor, and Let Craft Remain Restrained.</span>
+          </h2>
+          <p>
+            從挑選、處理、浸泡到熟成，工藝不是為了炫耀，而是為了讓青梅原有的酸香被更穩定、更細緻地保留下來。<br /><br />
+            From selection and preparation to infusion and aging, craftsmanship is not there to show off, but to preserve the original acidity and fragrance of green plums in a more stable and refined way.
+          </p>
+          <ul class="bullet-list">
+            <li>重視果實狀態與處理節奏 / Respect the fruit’s condition and preparation rhythm</li>
+            <li>讓青梅香氣與酒體慢慢融合 / Allow plum aroma and spirit to merge gradually</li>
+            <li>以熟成建立更圓潤的層次感 / Build a rounder, more layered taste through aging</li>
+          </ul>
+        </div>
 
-</div>
-</div>
+        <div class="section-visual">
+          <img class="wide" src="assets/cellar-process.jpg" alt="Cellar and aging process" />
+        </div>
+      </div>
+    </section>
 
-<!-- 品牌理念 -->
-<div class="section">
-<div class="container">
+    <!-- Products -->
+    <section class="section" id="products">
+      <div class="container section-heading">
+        <span class="eyebrow">Product Collection</span>
+        <h2>
+          從經典風味，到節慶與禮贈。
+          <span class="en-subtitle">From Classic Flavor to Festive Editions and Gift Collections.</span>
+        </h2>
+        <p>
+          梅見的產品不只停留在酒體本身，也延伸至設計、場景與分享方式，形成更完整的品牌體驗。<br /><br />
+          Meijian products extend beyond the wine itself into design, occasion, and the way they are shared, forming a fuller brand experience.
+        </p>
+      </div>
 
-<h2>真正的風味，從原料開始被尊重</h2>
-<p>True Flavor Begins with Respect for the Ingredient</p>
+      <div class="container product-grid">
+        <article class="product-card">
+          <img src="assets/classic-red.png" alt="Classic plum wine" />
+          <div class="product-content">
+            <p class="product-label">Classic Series</p>
+            <h3>
+              經典青梅酒
+              <span class="en-subtitle">Classic Plum Wine</span>
+            </h3>
+            <p>
+              以清爽、平衡、順滑的風味為基礎，適合日常飲用、餐桌分享與更輕鬆的微醺場景。<br /><br />
+              Built on a fresh, balanced, and smooth profile, it is perfect for everyday drinking, dining-table sharing, and relaxed moments.
+            </p>
+          </div>
+        </article>
 
-<p>
-青梅的酸、香與自然狀態，決定了梅酒最本質的層次與純淨。
-</p>
+        <article class="product-card">
+          <img src="assets/limited-gold.png" alt="Seasonal limited edition plum wine" />
+          <div class="product-content">
+            <p class="product-label">Seasonal Edition</p>
+            <h3>
+              節慶限定風味
+              <span class="en-subtitle">Seasonal Limited Edition</span>
+            </h3>
+            <p>
+              以更鮮明的節慶識別與設計語言，讓風味、包裝與分享場景彼此呼應，形成更具記憶點的體驗。<br /><br />
+              With stronger seasonal identity and visual language, the flavor, packaging, and sharing occasions come together to create a more memorable experience.
+            </p>
+          </div>
+        </article>
 
-<p>
-The acidity, aroma, and natural state of green plums
-define the purity and depth of plum wine.
-</p>
+        <article class="product-card">
+          <img src="assets/gift-box.png" alt="Gift collection plum wine box" />
+          <div class="product-content">
+            <p class="product-label">Gift Collection</p>
+            <h3>
+              禮盒精選
+              <span class="en-subtitle">Gift Collection</span>
+            </h3>
+            <p>
+              將東方禮贈文化與品牌設計結合，讓梅酒在節慶、合作與重要時刻中成為更完整的心意表達。<br /><br />
+              Blending oriental gifting culture with brand design, these gift selections turn plum wine into a fuller expression of thoughtfulness for festivals and important occasions.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-</div>
-</div>
+    <!-- Sharing -->
+    <section class="section section-soft" id="sharing">
+      <div class="container split-layout split-layout--reverse">
+        <div class="section-visual visual-double">
+          <img src="assets/dining-window.png" alt="Dining table and social sharing" />
+          <img src="assets/red-label-book.png" alt="Red label bottle and book" />
+        </div>
 
-<!-- 产品 -->
-<div class="section">
-<div class="container">
+        <div class="section-copy">
+          <span class="eyebrow">Dining & Sharing</span>
+          <h2>
+            從聚餐到微醺時刻，梅酒走進更日常的生活。
+            <span class="en-subtitle">From Dining Gatherings to Gentle Moments, Plum Wine Enters Everyday Life.</span>
+          </h2>
+          <p>
+            青梅酒可以出現在朋友聚餐、家庭餐桌、節慶分享，也能留給一個人的安靜片刻。它不必被過度定義，卻能自然融入不同市場與不同生活方式。<br /><br />
+            Plum wine belongs at dinners with friends, family meals, festive sharing, and even quiet moments alone. It naturally fits into different markets and lifestyles without needing to be overdefined.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<h2>產品系列 Products</h2>
+    <!-- Culture -->
+    <section class="section" id="culture">
+      <div class="container section-heading">
+        <span class="eyebrow">Brand Culture</span>
+        <h2>
+          讓梅花、青梅與器物，一起說明品牌的氣質。
+          <span class="en-subtitle">Let Plum Blossoms, Green Plums, and Objects Express the Spirit of the Brand Together.</span>
+        </h2>
+        <p>
+          品牌的感受不只來自味道，也來自視覺、節氣、器物與文化的共同作用。梅見希望把這份來自東方的細膩，轉化為更當代的品牌語言。<br /><br />
+          The feeling of a brand is shaped not only by taste, but also by visuals, seasonality, objects, and culture. Meijian translates this oriental delicacy into a more contemporary language.
+        </p>
+      </div>
 
-<div class="card-grid">
+      <div class="container culture-grid">
+        <div class="culture-main">
+          <img src="assets/blossom-bottle.png" alt="Bottle under plum blossoms" />
+        </div>
 
-<div class="card">
-<img src="assets/classic-red.png">
-<h3>經典青梅酒 Classic</h3>
-<p>清爽順滑，適合日常與餐桌分享</p>
-</div>
+        <div class="culture-side card-surface">
+          <h3>
+            梅花與青梅，都是品牌敘事的一部分。
+            <span class="en-subtitle">Plum Blossoms and Green Plums Are Both Part of the Brand Narrative.</span>
+          </h3>
+          <p>
+            梅花不只是裝飾元素，也象徵節氣、清雅與時間感。當器物、花影與果實一起進入品牌視覺，品牌就不只呈現產品，也呈現更完整的東方生活方式美感。<br /><br />
+            Plum blossoms are more than decorative motifs; they symbolize seasonality, elegance, and a sense of time. When objects, floral shadows, and fruit come together in the brand language, the brand presents not only products, but also a fuller oriental lifestyle aesthetic.
+          </p>
+        </div>
 
-<div class="card">
-<img src="assets/limited-gold.png">
-<h3>節慶限定 Seasonal</h3>
-<p>限定風味與設計，呈現節日氛圍</p>
-</div>
+        <div class="culture-small-grid">
+          <img src="assets/moss-bottle-a.png" alt="Bottle among moss and stones" />
+          <img src="assets/ice-bottle.png" alt="Bottle in iced serving scene" />
+          <img src="assets/garden-bottle.png" alt="Bottle in garden scene" />
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<img src="assets/gift-box.png">
-<h3>禮盒精選 Gift</h3>
-<p>適合送禮與收藏的精緻組合</p>
-</div>
+    <!-- Contact -->
+    <section class="section section-soft" id="contact">
+      <div class="container contact-grid">
+        <div class="section-copy">
+          <span class="eyebrow">Contact & Partnership</span>
+          <h2>
+            聯絡合作
+            <span class="en-subtitle">Contact & Partnership</span>
+          </h2>
+          <p>
+            歡迎零售渠道、餐飲合作、品牌聯名與全球市場洽詢。如需產品資料、合作方案或批發資訊，歡迎與我們聯絡。<br /><br />
+            We welcome retail channels, restaurant collaborations, brand partnerships, and global market inquiries. For product information, partnership proposals, or wholesale details, please contact us.
+          </p>
 
-</div>
+          <ul class="contact-list">
+            <li>電郵 / Email：hello@yourbrand.com</li>
+            <li>電話 / Phone：+852 0000 0000</li>
+            <li>WhatsApp：+852 0000 0000</li>
+            <li>市場 / Market：Global</li>
+          </ul>
+        </div>
 
-</div>
-</div>
+        <div class="contact-panel">
+          <form class="contact-form" onsubmit="return submitInquiry(event)">
+            <label>
+              姓名 / Name
+              <input type="text" name="name" placeholder="請輸入姓名 / Please enter your name" required />
+            </label>
 
+            <label>
+              電郵 / Email
+              <input type="email" name="email" placeholder="請輸入電郵 / Please enter your email" required />
+            </label>
+
+            <label>
+              電話 / Phone
+              <input type="text" name="phone" placeholder="請輸入電話 / Please enter your phone number" />
+            </label>
+
+            <label>
+              合作類型 / Inquiry Type
+              <select name="type">
+                <option>零售購買 / Retail Purchase</option>
+                <option>批發採購 / Wholesale</option>
+                <option>餐飲合作 / Restaurant Collaboration</option>
+                <option>品牌聯名 / Brand Partnership</option>
+                <option>其他查詢 / Other Inquiry</option>
+              </select>
+            </label>
+
+            <label>
+              留言 / Message
+              <textarea name="message" rows="5" placeholder="請輸入你的需求，例如數量、合作方式、市場地區。 / Please tell us about your needs."></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">提交查詢 / Submit Inquiry</button>
+            <p id="formMsg" class="form-msg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Meijian 梅見</h3>
+        <p class="footer-tagline">
+          把東方青梅風味，帶向更廣闊的餐桌與生活場景。<br />
+          Bringing the flavor of oriental green plums to broader dining tables and everyday lifestyles.
+        </p>
+        <p class="footer-desc">
+          以青梅為起點，結合風味、時間、文化與分享，建立更適合當代市場理解的梅酒品牌語言。<br /><br />
+          Beginning with green plums, we bring together flavor, time, culture, and sharing to build a plum wine brand language suited to contemporary global markets.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>網站導覽 / Sitemap</h4>
+        <ul>
+          <li><a href="#philosophy">品牌理念 / Philosophy</a></li>
+          <li><a href="#ingredient">青梅原料 / Ingredient</a></li>
+          <li><a href="#craft">釀造工藝 / Craft</a></li>
+          <li><a href="#products">產品系列 / Products</a></li>
+          <li><a href="#contact">聯絡合作 / Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>聯絡方式 / Contact</h4>
+        <ul>
+          <li>電郵 / Email：hello@yourbrand.com</li>
+          <li>電話 / Phone：+852 0000 0000</li>
+          <li>WhatsApp：+852 0000 0000</li>
+          <li>市場 / Market：Global</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Meijian 梅見. All Rights Reserved.</p>
+      <p>本網站內容僅供年滿18歲人士瀏覽及查詢。 / This website is intended for visitors aged 18 and above only.</p>
+    </div>
+  </footer>
+
+  <script>
+    const ageGate = document.getElementById("ageGate");
+    const enterSiteBtn = document.getElementById("enterSiteBtn");
+    const leaveSiteBtn = document.getElementById("leaveSiteBtn");
+    const ageConfirmed = localStorage.getItem("meijianAgeConfirmed");
+
+    if (ageConfirmed === "true") {
+      ageGate.style.display = "none";
+    }
+
+    enterSiteBtn.addEventListener("click", function () {
+      localStorage.setItem("meijianAgeConfirmed", "true");
+      ageGate.style.display = "none";
+    });
+
+    leaveSiteBtn.addEventListener("click", function () {
+      window.location.href = "https://www.google.com";
+    });
+
+    function submitInquiry(event) {
+      event.preventDefault();
+      const msg = document.getElementById("formMsg");
+      msg.textContent = "查詢已提交，我們會盡快與你聯絡。 / Your inquiry has been submitted. We will contact you soon.";
+      event.target.reset();
+      return false;
+    }
+  </script>
 </body>
 </html>
