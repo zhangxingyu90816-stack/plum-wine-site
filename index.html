@@ -3,226 +3,371 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meijian 梅見｜Global Plum Wine</title>
-  <meta name="description" content="Meijian 梅見全球青梅酒品牌官網。從青梅原料、釀造工藝到餐桌分享與節慶禮贈，呈現更完整的東方梅酒體驗。" />
+  <title>Meijian 梅見｜Global Plum Wine Brand</title>
+  <meta
+    name="description"
+    content="Meijian 梅見是一個來自東方的青梅酒品牌，將青梅、風味、工藝與生活方式結合，打造面向全球市場的現代梅酒體驗。 Meijian is an oriental plum wine brand that brings together ingredients, craftsmanship, culture, and lifestyle for a global audience."
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="age-gate" id="ageGate">
     <div class="age-gate__backdrop"></div>
     <div class="age-gate__card">
-      <p class="eyebrow">Age Confirmation</p>
-      <h2>請先確認年齡</h2>
-      <p>本網站內容僅供年滿 18 歲人士瀏覽。<br>請確認你已達所在地區法定飲酒年齡。</p>
+      <p class="age-gate__eyebrow">Age Confirmation</p>
+      <h2>請先確認年齡<br />Please Confirm Your Age</h2>
+      <p>
+        本網站內容僅供年滿 18 歲人士瀏覽。<br />
+        請確認你已達所在地區法定飲酒年齡。<br /><br />
+        This website is intended for visitors aged 18 or above only.<br />
+        Please confirm that you are of legal drinking age in your region.
+      </p>
       <div class="age-gate__actions">
-        <button class="btn btn-primary" id="enterSiteBtn">我已滿 18 歲</button>
-        <button class="btn btn-secondary" id="leaveSiteBtn">離開網站</button>
+        <button class="btn btn-primary" id="enterSiteBtn">我已滿18歲 / I am 18+</button>
+        <button class="btn btn-secondary" id="leaveSiteBtn">離開網站 / Leave</button>
       </div>
     </div>
   </div>
 
-  <header class="site-header">
+  <header class="site-header" id="top">
     <div class="container nav">
-      <a href="#top" class="brand">
+      <a href="#top" class="brand" aria-label="Meijian 梅見">
         <span class="brand-en">Meijian</span>
         <span class="brand-divider"></span>
         <span class="brand-zh">梅見</span>
       </a>
+
       <nav class="nav-links">
-        <a href="#philosophy">品牌理念</a>
-        <a href="#ingredient">青梅原料</a>
-        <a href="#craft">釀造工藝</a>
-        <a href="#products">產品系列</a>
-        <a href="#sharing">分享場景</a>
-        <a href="#culture">品牌文化</a>
-        <a href="#contact">聯絡合作</a>
+        <a href="#philosophy">品牌理念 / Philosophy</a>
+        <a href="#ingredient">青梅原料 / Ingredient</a>
+        <a href="#craft">釀造工藝 / Craft</a>
+        <a href="#products">產品系列 / Products</a>
+        <a href="#contact">聯絡合作 / Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero section">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
+        <div class="hero-copy">
           <span class="eyebrow">Global Plum Wine Brand</span>
-          <h1>青梅酒，屬於分享的時刻。</h1>
-          <p class="hero-text">從朋友相聚，到餐桌時刻，一杯梅酒讓氣氛自然發生。它不只是飲品，更是聚會裡最容易被記住的風味，也是讓分享變得更有溫度的那一杯。</p>
+          <h1>
+            青梅酒，屬於分享的時刻。<br />
+            <span class="en-subtitle">Plum Wine Belongs to Moments of Sharing.</span>
+          </h1>
+          <p class="hero-text">
+            從朋友相聚，到餐桌時刻，一杯梅酒，讓氣氛自然發生。
+            它不只是飲品，而是連結彼此的方式。<br /><br />
+            From gatherings with friends to everyday dining moments, a glass of plum wine helps the atmosphere unfold naturally.
+            It is not merely a drink, but a way to connect people.
+          </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#products">查看產品</a>
-            <a class="btn btn-secondary" href="#contact">聯絡合作</a>
+            <a class="btn btn-primary" href="#products">查看產品 / View Products</a>
+            <a class="btn btn-secondary" href="#contact">聯絡合作 / Contact Us</a>
           </div>
         </div>
-        <div class="hero-visual reveal">
-          <img src="assets/hero-party.png" alt="朋友聚會分享梅酒" />
+
+        <div class="hero-visual placeholder-box">
+          <span>Hero 主視覺圖片位置<br />Hero Image Area</span>
         </div>
       </div>
     </section>
 
     <section class="section section-soft" id="philosophy">
-      <div class="container split-layout split-layout--reverse align-start">
-        <div class="section-copy reveal">
+      <div class="container split-layout">
+        <div class="section-copy">
           <span class="eyebrow">Brand Philosophy</span>
-          <h2>一瓶梅酒，不只為飲用而存在。</h2>
-          <p>對梅見而言，青梅酒不只是酒體本身，而是一種從原料出發、經時間釀成，最終走進餐桌與人際分享的體驗總和。</p>
-          <p>我們希望把東方青梅的清香、節氣與文化感，轉化為更當代、更易親近，也更適合全球市場理解的品牌語言。</p>
+          <h2>
+            一瓶梅酒，不只為飲用而存在。<br />
+            <span class="en-subtitle">A Bottle of Plum Wine Exists for More Than Drinking.</span>
+          </h2>
+          <p>
+            對梅見而言，青梅酒不只是酒體本身，而是一種從原料出發、
+            經時間釀成，最終走進餐桌與人際分享的體驗總和。<br /><br />
+            For Meijian, plum wine is more than the liquid itself.
+            It is a complete experience that begins with ingredients, evolves through time, and ultimately enters dining tables and shared moments between people.
+          </p>
+          <p>
+            我們希望把東方青梅的清香、節氣與文化感，轉化為更當代、
+            更易親近、也更適合全球市場理解的品牌語言。<br /><br />
+            We hope to transform the fragrance of oriental green plums, the rhythm of the seasons, and a sense of culture into a more contemporary, approachable, and globally understandable brand language.
+          </p>
         </div>
-        <div class="section-visual reveal tall-visual">
-          <img src="assets/pour-studio.png" alt="梅見倒酒靜物" />
+
+        <div class="section-visual placeholder-box">
+          <span>品牌理念配圖位置<br />Brand Philosophy Image Area</span>
         </div>
       </div>
     </section>
 
     <section class="section" id="ingredient">
-      <div class="container section-heading reveal">
+      <div class="container section-heading">
         <span class="eyebrow">Natural Ingredient</span>
-        <h2>從一顆青梅開始，建立風味的起點。</h2>
-        <p>原料不是背景，而是品牌的出發點。成熟青梅的酸、香、汁水與果肉狀態，共同決定了最終酒體的清爽度、純淨感與層次。</p>
+        <h2>
+          從一顆青梅開始，建立風味的起點。<br />
+          <span class="en-subtitle">From a Single Green Plum Begins the Origin of Flavor.</span>
+        </h2>
+        <p>
+          原料不是背景，而是品牌的出發點。
+          成熟青梅的酸、香、汁水與果肉狀態，共同決定了最終酒體的清爽度、純淨感與層次。<br /><br />
+          Ingredients are not a background detail, but the true starting point of the brand.
+          The acidity, aroma, juiciness, and texture of ripe green plums together define the freshness, purity, and layered character of the final wine.
+        </p>
       </div>
+
       <div class="container ingredient-layout">
-        <div class="ingredient-main reveal">
-          <img src="assets/plum-picking-close.jpg" alt="青梅採摘近景" />
+        <div class="ingredient-images">
+          <div class="img-col">
+            <img src="assets/plum-main.jpg" alt="青梅採摘主圖 Plum Harvest Main Image" />
+          </div>
+
+          <div class="img-col">
+            <img src="assets/plum-side.jpg" alt="青梅採摘輔圖 Plum Harvest Supporting Image" />
+          </div>
         </div>
-        <div class="ingredient-side reveal card-surface">
-          <h3>真正的風味，從原料開始被尊重。</h3>
-          <p>我們重視果實的真實性，也重視採摘時節。青梅不是抽象的符號，而是梅酒一切香氣與口感的源頭。</p>
-          <p>青梅的鮮亮、微酸與自然果香，既是果實本身的表情，也是品牌延伸風味層次的起點。</p>
-        </div>
-        <div class="ingredient-strip reveal">
-          <img src="assets/plum-harvest.jpg" alt="青梅果園採摘" />
+
+        <div class="section-copy card-surface ingredient-card">
+          <h3>
+            真正的風味，從原料開始被尊重。<br />
+            <span class="en-subtitle">True Flavor Begins with Respect for the Ingredient.</span>
+          </h3>
+          <p>
+            我們重視果實的真實性，也重視採摘時節。
+            青梅不是抽象的符號，而是梅酒一切香氣與口感的源頭。<br /><br />
+            We value the authenticity of the fruit and the timing of harvest.
+            Green plums are not abstract symbols; they are the source of all aroma and flavor in plum wine.
+          </p>
+          <p>
+            青梅的鮮亮、微酸與自然果香，既是果實本身的自然表情，
+            也是品牌延伸風味層次的起點。<br /><br />
+            The brightness, gentle acidity, and natural fruit aroma of green plums are not only the fruit’s own expression,
+            but also the beginning of the layered taste that defines the brand.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="section section-soft" id="craft">
-      <div class="container split-layout align-start">
-        <div class="section-visual reveal wide-visual">
-          <img src="assets/cellar-process.jpg" alt="酒窖與熟成工藝" />
-        </div>
-        <div class="section-copy reveal">
+      <div class="container split-layout">
+        <div class="section-copy">
           <span class="eyebrow">Craftsmanship</span>
-          <h2>讓時間參與風味，讓工藝保持克制。</h2>
-          <p>從挑選、處理、浸泡到熟成，工藝不是為了炫耀，而是為了讓青梅原有的酸香被更穩定、更細緻地保留下來。</p>
+          <h2>
+            讓時間參與風味，讓工藝保持克制。<br />
+            <span class="en-subtitle">Let Time Shape the Flavor, and Let Craft Remain Restrained.</span>
+          </h2>
+          <p>
+            從挑選、處理、浸泡到熟成，工藝不是為了炫耀，
+            而是為了讓青梅原有的酸香被更穩定、更細緻地保留下來。<br /><br />
+            From selection and preparation to infusion and aging, craftsmanship is not meant to impress for its own sake,
+            but to preserve the original acidity and fragrance of green plums in a more stable and refined way.
+          </p>
           <ul class="bullet-list">
-            <li>重視果實狀態與處理節奏</li>
-            <li>讓青梅香氣與酒體慢慢融合</li>
-            <li>以熟成建立更圓潤的層次感</li>
+            <li>重視果實狀態與處理節奏 / Respect the fruit’s condition and preparation rhythm</li>
+            <li>讓青梅香氣與酒體慢慢融合 / Allow plum aroma and spirit to merge gradually</li>
+            <li>以熟成建立更圓潤的層次感 / Build a rounder and more layered taste through aging</li>
           </ul>
+        </div>
+
+        <div class="section-visual placeholder-box wide">
+          <span>酒窖 / 工藝場景圖片位置<br />Cellar / Craft Image Area</span>
         </div>
       </div>
     </section>
 
     <section class="section" id="products">
-      <div class="container section-heading reveal">
+      <div class="container section-heading">
         <span class="eyebrow">Product Collection</span>
-        <h2>從經典風味，到節慶與禮贈。</h2>
-        <p>梅見的產品不只停留在酒體本身，也延伸至設計、場景與分享方式，形成更完整的品牌體驗。</p>
+        <h2>
+          從經典風味，到節慶與禮贈。<br />
+          <span class="en-subtitle">From Classic Flavor to Festive Editions and Gift Collections.</span>
+        </h2>
+        <p>
+          梅見的產品不只停留在酒體本身，也延伸至設計、場景與分享方式，
+          形成更完整的品牌體驗。<br /><br />
+          Meijian products are not limited to the wine itself.
+          They extend into design, occasion, and the way they are shared, forming a more complete brand experience.
+        </p>
       </div>
+
       <div class="container product-grid">
-        <article class="product-card reveal">
-          <div class="product-media"><img src="assets/classic-red.png" alt="經典青梅酒" /></div>
+        <article class="product-card">
+          <div class="product-media placeholder-box">
+            <span>經典產品圖片位置<br />Classic Product Image</span>
+          </div>
           <div class="product-content">
             <p class="product-label">Classic Series</p>
-            <h3>經典青梅酒</h3>
-            <p>清爽順滑、果香清晰，適合日常微醺、餐後分享與更輕鬆的飲用節奏。</p>
+            <h3>經典青梅酒<br /><span class="en-subtitle">Classic Plum Wine</span></h3>
+            <p>
+              以清爽、平衡、順滑的風味為基礎，適合日常飲用、
+              餐桌分享與更輕鬆的微醺場景。<br /><br />
+              Built on a fresh, balanced, and smooth flavor profile,
+              it is well suited for everyday drinking, dining-table sharing, and easygoing moments of relaxation.
+            </p>
           </div>
         </article>
-        <article class="product-card reveal">
-          <div class="product-media"><img src="assets/limited-gold.png" alt="節慶限定風味" /></div>
+
+        <article class="product-card">
+          <div class="product-media placeholder-box">
+            <span>節慶限定圖片位置<br />Seasonal Edition Image</span>
+          </div>
           <div class="product-content">
             <p class="product-label">Seasonal Edition</p>
-            <h3>節慶限定風味</h3>
-            <p>以更鮮明的節慶識別與視覺語言，讓限定產品成為分享與收藏的一部分。</p>
+            <h3>節慶限定風味<br /><span class="en-subtitle">Seasonal Limited Edition</span></h3>
+            <p>
+              以更鮮明的節慶識別與設計語言，讓風味、包裝與分享場景彼此呼應，
+              形成更具記憶點的體驗。<br /><br />
+              With a stronger festive identity and visual language,
+              the flavor, packaging, and moments of sharing come together to create an experience that is more memorable.
+            </p>
           </div>
         </article>
-        <article class="product-card reveal">
-          <div class="product-media"><img src="assets/gift-box.png" alt="禮盒精選" /></div>
+
+        <article class="product-card">
+          <div class="product-media placeholder-box">
+            <span>禮盒圖片位置<br />Gift Box Image</span>
+          </div>
           <div class="product-content">
             <p class="product-label">Gift Collection</p>
-            <h3>禮盒精選</h3>
-            <p>結合東方紋樣、色彩與送禮需求，呈現更完整的節日心意與品牌合作體驗。</p>
+            <h3>禮盒精選<br /><span class="en-subtitle">Gift Collection</span></h3>
+            <p>
+              將東方禮贈文化與品牌設計結合，讓梅酒在節慶、
+              合作與重要時刻中成為更完整的心意表達。<br /><br />
+              Blending the oriental culture of gifting with brand design,
+              these gift selections allow plum wine to become a more complete expression of thoughtfulness during festivals, partnerships, and important occasions.
+            </p>
           </div>
         </article>
       </div>
     </section>
 
     <section class="section section-soft" id="sharing">
-      <div class="container split-layout split-layout--reverse align-start">
-        <div class="sharing-visual reveal">
-          <div class="share-card share-card--tall"><img src="assets/dining-window.png" alt="餐桌場景" /></div>
-          <div class="share-card"><img src="assets/hero-party.png" alt="朋友聚會分享" /></div>
+      <div class="container split-layout split-layout--reverse">
+        <div class="section-visual visual-double">
+          <div class="placeholder-box"><span>餐桌 / 聚會圖片位置 A<br />Dining / Gathering Image A</span></div>
+          <div class="placeholder-box"><span>餐桌 / 聚會圖片位置 B<br />Dining / Gathering Image B</span></div>
         </div>
-        <div class="section-copy reveal">
+
+        <div class="section-copy">
           <span class="eyebrow">Dining & Sharing</span>
-          <h2>從聚餐到微醺時刻，梅酒走進更日常的生活。</h2>
-          <p>青梅酒可以出現在朋友聚餐、家庭餐桌、節慶分享，也能留給一個人的安靜片刻。它不必被過度定義，卻能自然融入不同市場與不同生活方式之中。</p>
-          <p>它可以是開場時的第一杯，也可以是飯後慢慢聊天時的那一杯，讓分享有了更自然的風味。</p>
+          <h2>
+            從聚餐到微醺時刻，梅酒走進更日常的生活。<br />
+            <span class="en-subtitle">From Dining Gatherings to Gentle Moments, Plum Wine Enters Everyday Life.</span>
+          </h2>
+          <p>
+            青梅酒可以出現在朋友聚餐、家庭餐桌、節慶分享，
+            也能留給一個人的安靜片刻。它不必被過度定義，
+            卻能自然融入不同市場與不同生活方式之中。<br /><br />
+            Plum wine belongs at dinners with friends, family meals, festive sharing,
+            and even quiet moments alone. It does not need to be overdefined;
+            it can naturally fit into different markets and lifestyles.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="section" id="culture">
-      <div class="container section-heading reveal">
+      <div class="container section-heading">
         <span class="eyebrow">Brand Culture</span>
-        <h2>讓梅花、青梅與器物，一起說明品牌的氣質。</h2>
-        <p>品牌的感受不只來自味道，也來自視覺、節氣、器物與文化的共同作用。梅見希望把這份來自東方的細膩，轉化為更當代的品牌語言。</p>
+        <h2>
+          讓梅花、青梅與器物，一起說明品牌的氣質。<br />
+          <span class="en-subtitle">Let Plum Blossoms, Green Plums, and Objects Together Express the Spirit of the Brand.</span>
+        </h2>
+        <p>
+          品牌的感受不只來自味道，也來自視覺、節氣、器物與文化的共同作用。
+          梅見希望把這份來自東方的細膩，轉化為更當代的品牌語言。<br /><br />
+          The feeling of a brand is shaped not only by taste,
+          but also by visuals, seasonal sensibility, objects, and culture.
+          Meijian hopes to transform this oriental delicacy into a more contemporary brand language.
+        </p>
       </div>
+
       <div class="container culture-grid">
-        <figure class="culture-main reveal"><img src="assets/blossom-bottle.png" alt="梅花與梅酒" /></figure>
-        <div class="culture-copy reveal card-surface">
-          <h3>梅花與青梅，都是品牌敘事的一部分。</h3>
-          <p>梅花不只是裝飾元素，也象徵節氣、清雅與時間感。當器物、花影與果實一起被放進品牌視覺之中，品牌就不只呈現產品，也呈現一種更完整的東方生活方式美感。</p>
+        <div class="placeholder-box culture-main">
+          <span>品牌文化主圖位置<br />Brand Culture Main Image</span>
         </div>
-        <figure class="reveal"><img src="assets/moss-bottle-c.png" alt="自然山石氛圍中的梅酒" /></figure>
-        <figure class="reveal"><img src="assets/red-label-book.png" alt="書卷與紅標梅酒" /></figure>
-        <figure class="reveal"><img src="assets/ice-bottle.png" alt="冰飲場景中的梅酒" /></figure>
+        <div class="culture-side card-surface">
+          <h3>
+            梅花與青梅，都是品牌敘事的一部分。<br />
+            <span class="en-subtitle">Plum Blossoms and Green Plums Are Both Part of the Brand Narrative.</span>
+          </h3>
+          <p>
+            梅花不只是裝飾元素，也象徵節氣、清雅與時間感。
+            當器物、花影與果實一起被放進品牌視覺之中，
+            品牌就不只呈現產品，也呈現一種更完整的東方生活方式美感。<br /><br />
+            Plum blossoms are more than decorative elements;
+            they symbolize seasonality, elegance, and a sense of time.
+            When objects, floral shadows, and fruit are placed together in the brand’s visual language,
+            the brand presents not just products, but a fuller oriental lifestyle aesthetic.
+          </p>
+        </div>
+        <div class="placeholder-box"><span>文化輔圖 A<br />Culture Supporting Image A</span></div>
+        <div class="placeholder-box"><span>文化輔圖 B<br />Culture Supporting Image B</span></div>
+        <div class="placeholder-box"><span>文化輔圖 C<br />Culture Supporting Image C</span></div>
       </div>
     </section>
 
-    <section class="section section-soft" id="visuals">
-      <div class="container section-heading reveal">
-        <span class="eyebrow">Brand Visual Archive</span>
-        <h2>更多品牌影像</h2>
-        <p>從自然、器物、產品到節慶限定，這些視覺共同形成梅見完整的品牌表達。</p>
-      </div>
-      <div class="container visual-grid">
-        <figure class="reveal"><img src="assets/plum-bottle.png" alt="青梅與經典瓶身" /></figure>
-        <figure class="reveal"><img src="assets/double-bottle.png" alt="雙瓶陳列" /></figure>
-        <figure class="reveal"><img src="assets/garden-bottle.png" alt="庭園場景" /></figure>
-        <figure class="reveal"><img src="assets/moss-bottle-a.png" alt="苔蘚石景" /></figure>
-        <figure class="reveal"><img src="assets/moss-bottle-b.png" alt="霧感石景" /></figure>
-        <figure class="reveal"><img src="assets/horse-limited.png" alt="限定系列" /></figure>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container contact-grid align-start">
-        <div class="section-copy reveal">
+    <section class="section section-soft" id="contact">
+      <div class="container contact-grid">
+        <div class="section-copy">
           <span class="eyebrow">Contact & Partnership</span>
-          <h2>聯絡合作</h2>
-          <p>歡迎零售渠道、餐飲合作、品牌聯名與全球市場洽詢。如需產品資料、合作方案或批發資訊，歡迎與我們聯絡。</p>
+          <h2>
+            聯絡合作<br />
+            <span class="en-subtitle">Contact & Partnership</span>
+          </h2>
+          <p>
+            歡迎零售渠道、餐飲合作、品牌聯名與全球市場洽詢。
+            如需產品資料、合作方案或批發資訊，歡迎與我們聯絡。<br /><br />
+            We welcome retail channels, restaurant collaborations, brand partnerships, and global market inquiries.
+            For product information, partnership proposals, or wholesale details, please feel free to contact us.
+          </p>
+
           <ul class="contact-list">
-            <li>電郵：hello@yourbrand.com</li>
-            <li>電話：+852 0000 0000</li>
+            <li>電郵 / Email：hello@yourbrand.com</li>
+            <li>電話 / Phone：+852 0000 0000</li>
             <li>WhatsApp：+852 0000 0000</li>
-            <li>市場：Global</li>
+            <li>市場 / Market：Global</li>
           </ul>
         </div>
-        <div class="contact-panel reveal">
+
+        <div class="contact-panel">
           <form class="contact-form" onsubmit="return submitInquiry(event)">
-            <label>姓名<input type="text" name="name" placeholder="請輸入姓名" required></label>
-            <label>電郵<input type="email" name="email" placeholder="請輸入電郵" required></label>
-            <label>電話<input type="text" name="phone" placeholder="請輸入電話"></label>
-            <label>合作類型
+            <label>
+              姓名 / Name
+              <input type="text" name="name" placeholder="請輸入姓名 / Please enter your name" required />
+            </label>
+
+            <label>
+              電郵 / Email
+              <input type="email" name="email" placeholder="請輸入電郵 / Please enter your email" required />
+            </label>
+
+            <label>
+              電話 / Phone
+              <input type="text" name="phone" placeholder="請輸入電話 / Please enter your phone number" />
+            </label>
+
+            <label>
+              合作類型 / Inquiry Type
               <select name="type">
-                <option>零售購買</option>
-                <option>批發採購</option>
-                <option>餐飲合作</option>
-                <option>品牌聯名</option>
-                <option>其他查詢</option>
+                <option>零售購買 / Retail Purchase</option>
+                <option>批發採購 / Wholesale</option>
+                <option>餐飲合作 / Restaurant Collaboration</option>
+                <option>品牌聯名 / Brand Partnership</option>
+                <option>其他查詢 / Other Inquiry</option>
               </select>
             </label>
-            <label>留言<textarea name="message" rows="5" placeholder="請輸入你的需求，例如數量、合作方式、市場地區。"></textarea></label>
-            <button class="btn btn-primary btn-full" type="submit">提交查詢</button>
+
+            <label>
+              留言 / Message
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="請輸入你的需求，例如數量、合作方式、市場地區。 / Please tell us about your needs, such as quantity, cooperation model, or market region."
+              ></textarea>
+            </label>
+
+            <button class="btn btn-primary btn-full" type="submit">提交查詢 / Submit Inquiry</button>
             <p id="formMsg" class="form-msg"></p>
           </form>
         </div>
@@ -234,37 +379,75 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <h3>Meijian 梅見</h3>
-        <p class="footer-tagline">把東方青梅風味，帶向更廣闊的餐桌與生活場景。</p>
-        <p class="footer-desc">以青梅為起點，結合風味、時間、文化與分享，建立更適合當代市場理解的梅酒品牌語言。</p>
+        <p class="footer-tagline">
+          把東方青梅風味，帶向更廣闊的餐桌與生活場景。<br />
+          Bringing the flavor of oriental green plums to broader dining tables and everyday lifestyles.
+        </p>
+        <p class="footer-desc">
+          以青梅為起點，結合風味、時間、文化與分享，
+          建立更適合當代市場理解的梅酒品牌語言。<br /><br />
+          Beginning with green plums, we bring together flavor, time, culture, and sharing
+          to build a plum wine brand language better suited to contemporary global markets.
+        </p>
       </div>
+
       <div class="footer-links">
-        <h4>網站導覽</h4>
+        <h4>網站導覽 / Sitemap</h4>
         <ul>
-          <li><a href="#philosophy">品牌理念</a></li>
-          <li><a href="#ingredient">青梅原料</a></li>
-          <li><a href="#craft">釀造工藝</a></li>
-          <li><a href="#products">產品系列</a></li>
-          <li><a href="#contact">聯絡合作</a></li>
+          <li><a href="#philosophy">品牌理念 / Philosophy</a></li>
+          <li><a href="#ingredient">青梅原料 / Ingredient</a></li>
+          <li><a href="#craft">釀造工藝 / Craft</a></li>
+          <li><a href="#products">產品系列 / Products</a></li>
+          <li><a href="#contact">聯絡合作 / Contact</a></li>
         </ul>
       </div>
+
       <div class="footer-contact">
-        <h4>聯絡方式</h4>
+        <h4>聯絡方式 / Contact</h4>
         <ul>
-          <li>電郵：hello@yourbrand.com</li>
-          <li>電話：+852 0000 0000</li>
+          <li>電郵 / Email：hello@yourbrand.com</li>
+          <li>電話 / Phone：+852 0000 0000</li>
           <li>WhatsApp：+852 0000 0000</li>
-          <li>市場：Global</li>
+          <li>市場 / Market：Global</li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
       <p>© 2026 Meijian 梅見. All Rights Reserved.</p>
-      <p class="footer-note">本網站內容僅供年滿18歲人士瀏覽及查詢。</p>
+      <p class="footer-note">
+        本網站內容僅供年滿18歲人士瀏覽及查詢。<br />
+        This website is intended for visitors aged 18 and above only.
+      </p>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/85200000000" target="_blank" rel="noreferrer">WhatsApp</a>
+  <script>
+    const ageGate = document.getElementById("ageGate");
+    const enterSiteBtn = document.getElementById("enterSiteBtn");
+    const leaveSiteBtn = document.getElementById("leaveSiteBtn");
+    const ageConfirmed = localStorage.getItem("meijianAgeConfirmed");
 
-  <script src="script.js"></script>
+    if (ageConfirmed === "true") {
+      ageGate.style.display = "none";
+    }
+
+    enterSiteBtn.addEventListener("click", function () {
+      localStorage.setItem("meijianAgeConfirmed", "true");
+      ageGate.style.display = "none";
+    });
+
+    leaveSiteBtn.addEventListener("click", function () {
+      window.location.href = "https://www.google.com";
+    });
+
+    function submitInquiry(event) {
+      event.preventDefault();
+      const msg = document.getElementById("formMsg");
+      msg.textContent = "查詢已提交，我們會盡快與你聯絡。 / Your inquiry has been submitted. We will contact you soon.";
+      event.target.reset();
+      return false;
+    }
+  </script>
 </body>
 </html>
